@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
+import PostHeader from './PostHeader';
 
 class Post extends Component {
   constructor(props) {
@@ -8,8 +9,15 @@ class Post extends Component {
   }
 
   render() {
-    const { post } = this.props;
-    return <div />;
+    const {
+      post: { author, picture, date },
+    } = this.props;
+
+    return (
+      <Fragment>
+        <PostHeader author={author} picture={picture} date={date} />
+      </Fragment>
+    );
   }
 }
 
