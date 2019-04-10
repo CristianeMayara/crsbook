@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import Post from './components/Post';
+import Header from './components/Header';
 
 class App extends Component {
   constructor(props) {
@@ -39,6 +40,7 @@ class App extends Component {
     const { posts } = this.state;
     return (
       <Fragment>
+        <Header />
         {posts.map(post => (
           <Post key={post.id} post={post} />
         ))}
