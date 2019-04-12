@@ -1,6 +1,19 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import Post from './components/Post';
 import Header from './components/Header';
+
+const styles = {
+  containerStyle: {
+    flex: 1,
+    display: 'flex',
+    flexDirection: 'column',
+    backgroundColor: '#EBEDF0',
+  },
+  postsStyle: {
+    margin: '0 auto',
+    maxWidth: '500px',
+  },
+};
 
 class App extends Component {
   constructor(props) {
@@ -38,13 +51,16 @@ class App extends Component {
 
   renderPosts() {
     const { posts } = this.state;
+    const { containerStyle, postsStyle } = styles;
     return (
-      <Fragment>
+      <div style={containerStyle}>
         <Header />
-        {posts.map(post => (
-          <Post key={post.id} post={post} />
-        ))}
-      </Fragment>
+        <div style={postsStyle}>
+          {posts.map(post => (
+            <Post key={post.id} post={post} />
+          ))}
+        </div>
+      </div>
     );
   }
 
