@@ -1,29 +1,26 @@
 import React from 'react';
+import styled from 'styled-components';
 
-const styles = {
-  containerStyle: {
-    height: 43,
-    display: 'flex',
-    alignItems: 'center',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    backgroundColor: '#4267b2',
-    borderBottom: '1px solid #29487d',
-  },
-  textStyle: {
-    fontSize: 14,
-    color: 'white',
-    fontWeight: 'bold',
-  },
-};
+const Container = styled.div`
+  height: 43;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #4267b2;
+  border-bottom: 1px solid #29487d;
+`;
 
-const Header = () => {
-  const { containerStyle, textStyle } = styles;
-  return (
-    <div style={containerStyle}>
-      <p style={textStyle}>Face App</p>
-    </div>
-  );
-};
+const Title = styled.p`
+  font-size: 14;
+  color: white;
+  font-weight: bold;
+`;
+
+const Header = () => (
+  <Container>
+    <Title>Face App</Title>
+  </Container>
+);
 
 export default Header;
