@@ -1,60 +1,50 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
-const styles = {
-  headerStyle: {
-    height: 43,
-    display: 'flex',
-    width: '100%',
-    alignItems: 'center',
-    flexDirection: 'row',
-    justifyContent: 'flex-start',
-  },
-  containerStyle: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'flex-start',
-  },
-  titleStyle: {
-    fontSize: 14,
-    color: 'black',
-    fontWeight: 'bold',
-  },
-  dateStyle: {
-    fontSize: 14,
-    color: 'gray',
-  },
-  avatarStyle: {
-    width: 40,
-    height: 40,
-    marginRight: 8,
-    borderRadius: '50%',
-  },
-};
+const Header = styled.div`
+  height: 43;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+`;
 
-const PostHeader = ({ author, picture, date }) => {
-  const {
-    headerStyle, containerStyle, titleStyle, dateStyle, avatarStyle,
-  } = styles;
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  aligni-items: flex-start;
+`;
 
-  return (
-    <div style={headerStyle}>
-      <div
-        style={{
-          width: 40,
-          height: 40,
-          marginRight: 8,
-          borderRadius: '50%',
-          background: `url(${picture}) no-repeat center`,
-        }}
-      />
-      <div style={containerStyle}>
-        <div style={titleStyle}>{author}</div>
-        <div style={dateStyle}>{date}</div>
-      </div>
-    </div>
-  );
-};
+const Title = styled.div`
+  color: black;
+  font-size: 14;
+  font-weight: bold;
+`;
+
+const Date = styled.div`
+  font-size: 14;
+  color: gray;
+`;
+
+const Avatar = styled.div`
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: ${props => `url(${props.picture}) no-repeat center`};
+`;
+
+const PostHeader = ({ author, picture, date }) => (
+  <Header>
+    <Avatar picture={picture} />
+    <Container>
+      <Title>{author}</Title>
+      <Date>{date}</Date>
+    </Container>
+  </Header>
+);
 
 PostHeader.propTypes = {
   author: PropTypes.string.isRequired,
