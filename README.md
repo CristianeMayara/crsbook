@@ -8,6 +8,7 @@
 - Babel
 - ESLint
 - Prettier
+- EditorConfig
 - Husky
 - Webpack
 
