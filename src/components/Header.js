@@ -12,14 +12,14 @@ const Container = styled.div`
 `;
 
 const Title = styled.p`
-  font-size: 14;
   color: white;
+  font-size: 14px;
   font-weight: bold;
 `;
 
 const Header = () => (
   <Container>
-    <Title>Face App</Title>
+    <Title>CRSbook</Title>
   </Container>
 );
 

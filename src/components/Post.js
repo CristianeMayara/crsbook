@@ -5,8 +5,8 @@ import styled from 'styled-components';
 import PostHeader from './PostHeader';
 
 const Container = styled.div`
-  padding: 16px;
   display: flex;
+  padding: 26px;
   border-radius: 2px;
   flex-direction: column;
   align-items: flex-start;
@@ -17,19 +17,17 @@ const Container = styled.div`
 
 const Divider = styled.hr`
   width: 100%;
-  margin: 14px 0px;
-  border-top: '1px solid #fafafb';
+  margin: 20px 0px;
+  border-top: 1px solid #fafafb;
 `;
 
 const Text = styled.div`
-  font-size: 14;
-  color: black;
+  color: #9e9e9e;
+  font-size: 13px;
 `;
 
 const Post = ({ post }) => {
-  const {
-    author, picture, date, text,
-  } = post;
+  const { author, picture, date, text } = post;
 
   return (
     <Container>

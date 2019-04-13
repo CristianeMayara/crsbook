@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Header = styled.div`
-  height: 43;
+  height: 43px;
   display: flex;
   width: 100%;
   align-items: center;
@@ -18,20 +18,21 @@ const Container = styled.div`
 `;
 
 const Title = styled.div`
-  color: black;
-  font-size: 14;
+  color: #919191;
+  font-size: 14px;
   font-weight: bold;
 `;
 
 const Date = styled.div`
-  font-size: 14;
-  color: gray;
+  color: #c4c4c4;
+  font-size: 12px;
+  margin-top: 3px;
 `;
 
 const Avatar = styled.div`
   width: 40px;
   height: 40px;
-  margin-right: 8px;
+  margin-right: 16px;
   border-radius: 50%;
   background: ${props => `url(${props.picture}) no-repeat center`};
 `;
