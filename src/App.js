@@ -8,11 +8,11 @@ const Container = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
-  background-color: '#EBEDF0';
+  background-color: #ebedf0;
 `;
 
 const Posts = styled.div`
-  margin: '0 auto';
+  margin: 0 auto;
   max-width: 500px;
 `;
 
